@@ -7,7 +7,9 @@
 <body>
 <h1>Session</h1>
 <p>
-
+    <%--  session.setAttribute -> sessionScope -> el 해석  --%>
+    ${data} <br>
+    ${dto}
 </p>
 </body>
 </html>
