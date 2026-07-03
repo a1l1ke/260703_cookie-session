@@ -1,4 +1,4 @@
-<%-- webapp/WEB-INF/views/step01/cookie.jsp --%>
+<%-- webapp/WEB-INF/views/step02/session.jsp --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
