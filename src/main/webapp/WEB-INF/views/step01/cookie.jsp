@@ -6,5 +6,8 @@
 </head>
 <body>
 <h1>Cookie</h1>
+<p>
+    ${cookie.get("firstCookie").value}
+</p>
 </body>
 </html>
