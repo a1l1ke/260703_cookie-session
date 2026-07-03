@@ -28,7 +28,14 @@ public class CookieServlet extends HttpServlet {
         // 1. path
         // 기본값은 cookie.setPath("/");
         // -> 다른 페이지에서도 볼 수 있다
-        cookie.setPath("/cookie"); // 이 경로에만 읽을 수 있게
+//        cookie.setPath("/cookie"); // 이 경로에만 읽을 수 있게
+        // 2. 지속시간
+//        cookie.setMaxAge(-1); // 기본값
+        // 세션 쿠키 -> 현재 브라우저가 켜 있는 동안
+//        cookie.setMaxAge(16); // 16초 동안 유지
+        // 0보다 큰 양수는 초. 60 * 60 * 24 하루. 86400
+        cookie.setMaxAge(60 * 60 * 24); // 하루 유지
+//        cookie.setMaxAge(86400);
         return cookie;
     }
 
