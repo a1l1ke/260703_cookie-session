@@ -23,6 +23,13 @@ public class EncodingFilter implements Filter {
         // ServletRequest -> HttpServletRequest
         HttpServletRequest req = (HttpServletRequest) request; // 다운캐스팅
         System.out.println("RequestURI = " + req.getRequestURI());
+
+        // 인코딩 처리
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
+        System.out.println("인코딩 처리 완료");
+
         chain.doFilter(request, response); // chain을 다음으로 넘겨주지 않으면 원래 가려던 곳으로 못감
     }
 
