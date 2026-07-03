@@ -25,9 +25,15 @@ public class AuthServlet extends HttpServlet {
         if ("admin".equals(username) && "1234".equals(password)) {
             HttpSession session = req.getSession();
             session.setAttribute("user", username);
+            session.setAttribute("grade", "free");
 //            req.setAttribute("msg", "Login success"); // redirect 시 req.attribute를 전달 X.
-            session.setAttribute("msg", "Login success");
-
+            session.setAttribute("msg", "Login success (free)");
+        }
+        if ("admin2".equals(username) && "1234".equals(password)) {
+            HttpSession session = req.getSession();
+            session.setAttribute("user", username);
+            session.setAttribute("grade", "premium");
+            session.setAttribute("msg", "Login success (premium)");
         }
         resp.sendRedirect("/auth"); // 빈 접속 요청으로 인식
         // 1. 세션
