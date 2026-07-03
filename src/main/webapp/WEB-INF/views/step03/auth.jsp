@@ -6,7 +6,18 @@
 </head>
 <body>
 <h1>Auth</h1>
-<p>
-</p>
+<form method="post">
+    <input name="username"><br>
+    <input name="password" type="password"><br>
+    <input type="submit">
+</form>
+<section>
+    <p>
+        ${user}
+    </p>
+    <p>
+        ${msg}
+    </p>
+</section>
 </body>
 </html>
